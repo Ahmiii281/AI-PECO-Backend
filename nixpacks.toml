@@ -1,0 +1,14 @@
+# nixpacks.toml — Railway build configuration for AI-PECO backend
+# Railway sets Root Directory = backend, so this file lives in backend/
+
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[variables]
+PYTHONPATH = "."
+
+[start]
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
