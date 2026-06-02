@@ -68,7 +68,7 @@ class Settings(BaseSettings):
 
     # ── Frontend ──────────────────────────────────────────────────────────────
     # Used to build password-reset links in emails.
-    FRONTEND_URL: str = "http://localhost:3000"
+    FRONTEND_URL: str = "https://ai-peco-frontend.vercel.app"
 
     # ── Features ─────────────────────────────────────────────────────────────
     ENABLE_AI_PREDICTIONS: bool = True
